@@ -41,6 +41,32 @@ bsl-decompiler-x64.exe decompile /?
 See [Installation](docs/installation.md) and [Usage](docs/usage.md) for the
 complete public documentation.
 
+### CFG engine and diagnostic output
+
+```powershell
+bsl-decompiler-x64.exe decompile configuration.cf output `
+  --engine cfg `
+  --dump-cfg `
+  --dump-ir `
+  --dump-ssa
+```
+
+- `--engine cfg` selects the CFG-based reconstruction pipeline:
+  bytecode → CFG → symbolic execution → IR → SSA → AST → BSL. It reconstructs
+  control-flow constructs conservatively and preserves labels and jumps when a
+  safe structure cannot be proved.
+- `--dump-cfg` writes `Module.v2.cfg.dot`, a Graphviz representation of basic
+  blocks and control-flow edges.
+- `--dump-ir` writes `Module.ir.txt` with the intermediate operations and
+  `Module.ast.json` with the reconstructed BSL syntax tree before printing.
+- `--dump-ssa` writes `Module.ssa.txt` with variable versions, merge points,
+  and unresolved Phi values.
+
+The `--dump-*` options create diagnostic files and do not by themselves change
+the reconstructed BSL. They are primarily intended for troubleshooting and
+decompiler analysis. As with the regular `decompile` command, artifacts are
+created only for modules classified as `compiled_only`.
+
 ### Download
 
 Ready-to-use binaries and `SHA256SUMS.txt` are distributed through the
@@ -125,6 +151,32 @@ bsl-decompiler-x64.exe decompile /?
 
 Подробности приведены в документах [Установка](docs/installation.md) и
 [Использование](docs/usage.md).
+
+### CFG-движок и диагностические файлы
+
+```powershell
+bsl-decompiler-x64.exe decompile configuration.cf output `
+  --engine cfg `
+  --dump-cfg `
+  --dump-ir `
+  --dump-ssa
+```
+
+- `--engine cfg` выбирает конвейер восстановления на основе CFG:
+  bytecode → CFG → символьное исполнение → IR → SSA → AST → BSL. Он
+  консервативно восстанавливает управляющие конструкции, а если безопасность
+  преобразования не доказана — сохраняет метки и переходы.
+- `--dump-cfg` создаёт `Module.v2.cfg.dot` — граф базовых блоков и переходов в
+  формате Graphviz.
+- `--dump-ir` создаёт `Module.ir.txt` с промежуточными операциями и
+  `Module.ast.json` с восстановленным синтаксическим деревом BSL перед печатью.
+- `--dump-ssa` создаёт `Module.ssa.txt` с версиями переменных, точками слияния
+  и неразрешёнными значениями Phi.
+
+Параметры `--dump-*` создают только диагностические файлы и сами по себе не
+изменяют восстановленный BSL. Они предназначены прежде всего для поиска причин
+ошибок декомпиляции. Как и обычная команда `decompile`, они создают артефакты
+только для модулей с классификацией `compiled_only`.
 
 ### Загрузка
 
