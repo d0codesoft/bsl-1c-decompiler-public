@@ -12,9 +12,9 @@ Only modules classified as `compiled_only` are written by the `disasm` and
 `decompile` commands. Modules that already contain source code are reported by
 `scan` but are not copied to the output directory.
 
-![](https://github.com/d0codesoft/bsl-decompiler-public/docs/images/decompile.png)
+![Deobfuscate example](docs/images/decompile.png)
 
-![](https://github.com/d0codesoft/bsl-decompiler-public/docs/images/decompile.png)
+![Decompilation example](docs/images/decompile.png)
 
 ### Features
 
