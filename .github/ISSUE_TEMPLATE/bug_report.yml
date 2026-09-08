@@ -1,0 +1,30 @@
+name: Bug report / Сообщение об ошибке
+description: Report a reproducible problem without attaching proprietary 1C data.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach confidential CF/CFE/EPF/ERF files. Provide a minimal sanitized sample when possible.
+        Не прикладывайте конфиденциальные CF/CFE/EPF/ERF. По возможности используйте минимальный обезличенный пример.
+  - type: input
+    id: version
+    attributes:
+      label: Version / Версия
+      placeholder: v0.1.0 win-x64
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output / Команда и вывод
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / Описание
+    validations:
+      required: true

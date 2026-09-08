@@ -1,0 +1,46 @@
+BSL Decompiler Software License
+
+Copyright (c) 2026 BSL Decompiler authors.
+All rights reserved.
+
+This software is proprietary software.
+
+Permission is granted to use the distributed binary version of the software,
+subject to the terms of this license. This license does not grant permission
+to distribute or publish the source code.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, ACCURACY, RELIABILITY, AVAILABILITY, OR FITNESS FOR
+A PARTICULAR PURPOSE.
+
+THE USER USES THE SOFTWARE ENTIRELY AT THEIR OWN RISK.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE AUTHOR, COPYRIGHT
+HOLDER, DEVELOPERS, AND DISTRIBUTORS SHALL NOT BE LIABLE FOR ANY CLAIM,
+DAMAGE, LOSS, DATA LOSS, LOST PROFITS, BUSINESS INTERRUPTION, OR OTHER
+LIABILITY ARISING FROM THE USE OF OR INABILITY TO USE THE SOFTWARE.
+
+NO CLAIMS OR DEMANDS MAY BE MADE AGAINST THE AUTHOR OR COPYRIGHT HOLDER IN
+CONNECTION WITH THE USE OF THE SOFTWARE, EXCEPT WHERE SUCH LIMITATION IS
+PROHIBITED BY APPLICABLE LAW.
+
+The source code is not distributed under this license.
+
+Third-party components included with or used by the software remain subject
+to their respective licenses and copyright terms. This license does not
+replace or restrict those third-party terms.
+
+By using the software, the user accepts these terms.
+
+Russian summary / Краткое изложение на русском языке
+
+BSL Decompiler является проприетарным программным обеспечением. Разрешается
+использовать распространяемую бинарную версию на условиях настоящей лицензии.
+Исходный код по этой лицензии не распространяется. Программа предоставляется
+«КАК ЕСТЬ», без гарантий; пользователь применяет её на собственный риск.
+Ответственность автора, правообладателя, разработчиков и распространителей
+ограничивается в максимальной степени, допускаемой применимым
+законодательством. Сторонние компоненты сохраняют собственные лицензии и
+условия авторского права. При расхождениях определяющим является английский
+текст выше.

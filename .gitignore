@@ -1,0 +1,16 @@
+# Public repository allowlist. Release binaries belong to GitHub Releases.
+*
+!.gitignore
+!README.md
+!LICENSE
+!CHANGELOG.md
+!THIRD_PARTY_NOTICES.md
+!docs/
+!docs/*.md
+!licenses/
+!licenses/*.txt
+!.github/
+!.github/ISSUE_TEMPLATE/
+!.github/ISSUE_TEMPLATE/*.yml
+!.github/ISSUE_TEMPLATE/*.yaml
+!.github/ISSUE_TEMPLATE/*.md
