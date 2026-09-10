@@ -1,8 +1,8 @@
 # BSL Decompiler
 
-[English](#english) · [Русский](#русский)
+[Eng](#english) · [Rus](#русский)
 
-## English
+## BSL Decompiler
 
 BSL Decompiler is a command-line tool for analyzing, deobfuscating, and
 reconstructing compiled-only 1C:Enterprise BSL modules. It also provides a
@@ -119,7 +119,7 @@ law, the author and distributors shall not be liable for damages, losses, data
 loss, lost profits, business interruption, or other consequences arising from
 use of or inability to use the software.
 
-## Русский
+## Декомпилятор BSL
 
 BSL Decompiler — консольный инструмент для анализа, деобфускации и
 восстановления compiled-only модулей BSL платформы 1С:Предприятие. Также
