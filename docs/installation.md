@@ -11,13 +11,14 @@
 4. Verify the archive before extracting it:
 
 ```powershell
-Get-FileHash .\BSL-Decompiler-v0.1.0-win-x64.zip -Algorithm SHA256
+Get-FileHash .\BSL-Decompiler-v0.2.0-win-x64.zip -Algorithm SHA256
 Get-Content .\SHA256SUMS.txt
 ```
 
 5. Extract the archive and display the built-in help:
 
 ```powershell
+.\bsl-decompiler-x64.exe --version
 .\bsl-decompiler-x64.exe /?
 ```
 
@@ -35,13 +36,14 @@ Release archives are not committed to the public repository branch.
 4. До распаковки сравните контрольную сумму архива:
 
 ```powershell
-Get-FileHash .\BSL-Decompiler-v0.1.0-win-x64.zip -Algorithm SHA256
+Get-FileHash .\BSL-Decompiler-v0.2.0-win-x64.zip -Algorithm SHA256
 Get-Content .\SHA256SUMS.txt
 ```
 
 5. Распакуйте архив и откройте встроенную справку:
 
 ```powershell
+.\bsl-decompiler-x64.exe --version
 .\bsl-decompiler-x64.exe /?
 ```
 

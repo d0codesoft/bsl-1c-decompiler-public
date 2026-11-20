@@ -2,6 +2,10 @@
 
 [Eng](#english) · [Rus](#русский)
 
+**Current release / Текущая версия: [v0.2.0](https://github.com/d0codesoft/bsl-1c-decompiler-public/releases/tag/v0.2.0)** · 2026-11-20
+
+<a id="english"></a>
+
 ## BSL Decompiler
 
 BSL Decompiler is a command-line tool for analyzing, deobfuscating, and
@@ -26,7 +30,27 @@ Only modules classified as `compiled_only` are written by the `disasm` and
 - symbolic analysis and conservative dead-branch removal;
 - BSL deobfuscation and source reconstruction;
 - textual BSL restoration without a container;
+- scope-aware module/local declarations and bytecode-to-BSL symbol validation;
+- validated module initialization for supported straight-line bytecode;
+- opt-in AST semantic optimization: `Off`, `Safe`, and `Balanced`;
+- full startup help and diagnostic fallback when complete reconstruction fails;
 - x64 and x32 Windows command-line builds.
+
+### New in v0.2.0
+
+Private variable names are consistent across declarations, methods, and module
+initialization. Public parameter names and exports are preserved. Unresolved
+bindings block semantic optimization. Invalid table references are diagnosed
+rather than replaced with invented locals or constants.
+
+```powershell
+bsl-decompiler-x64.exe --version
+bsl-decompiler-x64.exe decompile module.epf out --dump-cfg --fallback-diagnostic --semantic-optimization Balanced
+```
+
+`--fallback-diagnostic` preserves a partial diagnostic listing on failure;
+it does not make that listing a complete executable module. `--aggressive`
+belongs only to `restore` and currently enables no extra transformations.
 
 ### Supported input
 
@@ -119,6 +143,8 @@ law, the author and distributors shall not be liable for damages, losses, data
 loss, lost profits, business interruption, or other consequences arising from
 use of or inability to use the software.
 
+<a id="русский"></a>
+
 ## Декомпилятор BSL
 
 BSL Decompiler — консольный инструмент для анализа, деобфускации и
@@ -137,7 +163,27 @@ BSL Decompiler — консольный инструмент для анализ
 - символьный анализ и консервативное удаление доказанно мёртвых ветвей;
 - деобфускация и восстановление исходного BSL;
 - восстановление текстового BSL без контейнера;
+- объявления модульных и локальных переменных с проверкой привязок к байткоду;
+- проверяемая инициализация модуля для поддерживаемого линейного байткода;
+- включаемая семантическая оптимизация AST: `Off`, `Safe`, `Balanced`;
+- полная справка при запуске и диагностический вывод при ошибке восстановления;
 - консольные сборки Windows x64 и x32.
+
+### Новое в v0.2.0
+
+Приватные имена согласованы между объявлениями, методами и инициализацией
+модуля. Имена публичных параметров и экспорт сохраняются. Неразрешённые
+привязки блокируют семантическую оптимизацию. Ссылки вне таблиц диагностируются:
+отсутствующие локальные переменные и константы не подставляются.
+
+```powershell
+bsl-decompiler-x64.exe --version
+bsl-decompiler-x64.exe decompile module.epf out --dump-cfg --fallback-diagnostic --semantic-optimization Balanced
+```
+
+`--fallback-diagnostic` сохраняет частичный диагностический листинг при ошибке;
+это не означает полного восстановления исполняемого модуля. `--aggressive`
+принимает только `restore`; сейчас этот флаг не включает дополнительных преобразований.
 
 ### Поддерживаемые входные данные
 
